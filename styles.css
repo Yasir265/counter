@@ -1,0 +1,91 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:sans-serif;
+}
+
+#app{
+  padding:1.5rem;
+  max-width:480px;
+  margin:auto;
+}
+
+.mode-tabs{
+  display:flex;
+  gap:6px;
+  justify-content:center;
+  margin-bottom:2rem;
+}
+
+.mode-tab{
+  padding:7px 16px;
+  border:1px solid #ccc;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.mode-tab.active{
+  background:black;
+  color:white;
+}
+
+.timer-card{
+  text-align:center;
+  padding:20px;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+
+.ring-wrap{
+  position:relative;
+  width:200px;
+  height:200px;
+  margin:auto;
+}
+
+.ring-bg{
+  fill:none;
+  stroke:#eee;
+  stroke-width:8;
+}
+
+.ring-progress{
+  fill:none;
+  stroke-width:8;
+  stroke:#534AB7;
+  transform:rotate(-90deg);
+  transform-origin:50% 50%;
+}
+
+.ring-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.ring-time{
+  font-size:32px;
+}
+
+.controls{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.ctrl-btn{
+  padding:10px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.ctrl-btn.primary{
+  background:black;
+  color:white;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<div id="app" role="main">
+  <h2 style="position:absolute;left:-9999px">
+    Pomodoro timer — start, pause and configure work and break intervals
+  </h2>
+
+  <!-- Tabs -->
+  <div class="mode-tabs">
+    <button class="mode-tab active" onclick="switchMode('work')">Work</button>
+    <button class="mode-tab" onclick="switchMode('short')">Short break</button>
+    <button class="mode-tab" onclick="switchMode('long')">Long break</button>
+  </div>
+
+  <!-- Notification -->
+  <div class="notification-banner" id="notif-banner"></div>
+
+  <!-- Timer -->
+  <div class="timer-card">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 200 200">
+        <circle class="ring-bg" cx="100" cy="100" r="88"/>
+        <circle class="ring-progress" id="ring-progress"
+          cx="100" cy="100" r="88"
+          stroke-dasharray="553" stroke-dashoffset="0"/>
+      </svg>
+
+      <div class="ring-center">
+        <div class="ring-time" id="ring-time">25:00</div>
+        <div class="ring-session-type" id="ring-mode-label">Work session</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="ctrl-btn" onclick="resetTimer()">Reset</button>
+      <button class="ctrl-btn primary" onclick="toggleTimer()">Start</button>
+      <button class="ctrl-btn" onclick="skipSession()">Skip</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
